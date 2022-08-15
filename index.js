@@ -10,17 +10,6 @@ const User = require('./models/User')
 app.use(express.json())
 app.use(cors({ origin: true }))
 
-/*
-- Query params => ?nome=valor&idade=valor  => req.query (objeto) Filtros de busca
-- Route params => /users/:id (users/1) => req.params BUSCAR, DELETAR, ATUALIZAR
-- Request Body => { "name": "Marcelo", "email": "mlluiz@gmail.com" } => req.body (objeto)
-
-- GET: Buscar uma informação do back-end
-- POST: Criar uma informação no back-end
-- PUT / PATCH: Atualizar uma informação no back-end
-- DELETE: Deletar uma informação no back-end
-*/
-
 app.post('/users', async (req, res) => {
   const { name, email } = req.body
   const user = await User.create({ id: User.id, name, email })
