@@ -24,6 +24,11 @@ app.get('/order', async (req, res) => {
   return res.json(order)
 })
 
+app.get('/order', async (req, res) => {
+  const orders = await Order.findAll()
+  return res.json(orders)
+})
+
 app.get('/order/:id', async (req, res) => {
   const order = await Order.findByPk(req.params.id)
   return res.json(order)
