@@ -1,23 +1,23 @@
 {
-  "name": "first-project",
+  "name": "hamburgueria",
   "version": "1.0.0",
-  "description": "primeiro projeto node",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "build": "node"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
+  "keywords": [],
   "author": "Marcelo Luiz",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "pg": "^8.7.3",
-    "sequelize": "^6.21.0"
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.15"
   }
 }

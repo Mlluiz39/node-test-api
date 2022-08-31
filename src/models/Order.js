@@ -1,24 +1,32 @@
 const Sequelize = require('sequelize')
 const db = require('./db')
 
-const User = db.define('users', {
+
+const Order = db.define('order', {
   id: {
     type: Sequelize.UUID,
-    allowNull: false,
     defaultValue: Sequelize.UUIDV4,
     primaryKey: true,
+    allowNull: false
   },
-  name: {
+  firstName: {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  email: {
+  hamburger: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique: true,
+  },
+  drink: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  follow_up: {
+    type: Sequelize.STRING,
+    allowNull: false,
   },
 })
 
-User.sync()
+Order.sync()
 
-module.exports = User
+module.exports = Order
